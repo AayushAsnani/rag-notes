@@ -7,8 +7,7 @@ client = chromadb.PersistentClient(
 collection = client.get_or_create_collection(
     name="pdf_notes"
 )
-
-def store_chunks(chunks, embeddings):
+def store_embeddings(chunks, embeddings):
 
     ids = [str(i) for i in range(len(chunks))]
 
